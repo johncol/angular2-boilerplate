@@ -1,0 +1,9 @@
+<ul class="nav nav-pills">
+    <li class="nav-item" *ngFor="let item of items">
+        <a
+            class="nav-link"
+            routerLinkActive="active"
+            [class.disabled]="item.disabled"
+            [routerLink]="item.target">{{item.label}}</a>
+    </li>
+</ul>

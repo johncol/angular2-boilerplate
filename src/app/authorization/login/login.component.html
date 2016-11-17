@@ -1,0 +1,21 @@
+<div class="login">
+  <div class="login-form-container">
+    <h1>Sign In</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
+      <app-alert 
+        *ngIf="state.message"
+        type="danger"
+        [message]="state.message"
+      ></app-alert>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" formControlName="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </form>
+  </div>
+</div>
